@@ -12,8 +12,8 @@ function Home() {
     <div>
       <section id='hero'><Hero/> </section>
       <section id='about'><About/></section>
-      <section id='project'><Projects/></section>
-      <section id='workwithme'><WorkWithMe/></section>
+      <section id='projects'><Projects/></section>
+      <section id='workWithMe'><WorkWithMe/></section>
       <section id='donate'><Donate/></section>
     </div>
   )
