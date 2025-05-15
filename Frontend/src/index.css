@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+
+html {
+  scroll-behavior: smooth;
+}
+/* Global variables */
+:root {
+  --midnight: #0F172A;
+  --skyBlue: #0EA5E9;
+  --white: #FFFFFF;
+  --darkSlate: #1E293B;
+  --light-navy:#112240
+}
+
+[data-theme='dark'] {
+  --bg: var(--midnight);
+  --text: var(--white);
+  --secondary-bg: var(--darkSlate);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+[data-theme='light'] {
+  --bg: var(--white);
+  --text: var(--midnight);
+  --secondary-bg: var(--darkSlate);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.15s ease;
+  z-index: 10;
+}
