@@ -8,8 +8,10 @@ html {
 :root {
   --midnight: #0F172A;
   --skyBlue: #0EA5E9;
-  --white: #FFFFFF;
+  --white: #E5E7EB;
   --darkSlate: #1E293B;
+  --light-gray: #E5E7EB
+  --hard-gray: #111827
   --light-navy:#112240
 }
 
@@ -17,6 +19,7 @@ html {
   --bg: var(--midnight);
   --text: var(--white);
   --secondary-bg: var(--darkSlate);
+  --bg-logo:var( --light-gray);
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -24,7 +27,9 @@ html {
 [data-theme='light'] {
   --bg: var(--white);
   --text: var(--midnight);
+  --bg-logo:var(--hard-gray);
   --secondary-bg: var(--darkSlate);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body {
