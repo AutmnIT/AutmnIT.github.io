@@ -19,12 +19,12 @@ export default function About() {
 
   return (
 
-    <div className=" text-[--text] p-9 ">
+    <div className=" text-[--text] py-9 ">
       <div className="about container m-auto w-[max(75vw,300px)]">
-        <div className="a flex justify-center p-9 ">
-          <h2 className=' alg border-6 border-black md:text-3xl p-4 md:px-18 font-bold tracking-widest'>A B O U T &nbsp; M E</h2>
+        <div className="a flex justify-center p-8 ">
+          <h2 className=' alg border-4 md:text-3xl p-4  md:px-18 font-bold tracking-widest'>A B O U T &nbsp; M E</h2>
         </div>
-        <div className="content m-auto w-[max(65vw,300px)]">
+        <div className="content m-auto w-[max(65vw,300px)] my-6">
           <div className="main">
             <p>I&apos;m a full-stack developer who builds with purpose and ships with precision. With a strong foundation in JavaScript, Node.js, and modern web frameworks, I focus on crafting clean, scalable, and user-centered solutions. Whether it&apos;s building systems from scratch or improving existing ones, I bring clarity, speed, and a product mindset to the table.</p>
 
@@ -53,7 +53,7 @@ export default function About() {
           <div className="f relative  p-6 w-[max(40vw,300px)] mt-6">
             {/* Faded background icon */}
             <MdDesignServices
-              className="absolute -top-2 -left-5 w-20 h-20 text-[bg-logo] opacity-10 pointer-events-none select-none"
+              className="absolute -top-2 -left-5 w-20 h-20 text-[var(--bg-logo)] opacity-10 pointer-events-none select-none"
             />
             {/* Content */}
             <div className="relative">
@@ -67,7 +67,7 @@ export default function About() {
           <div className="s relative  p-6 w-[max(40vw,300px)] mt-6 ">
             {/* Faded background icon */}
             <FaScrewdriverWrench
-              className="absolute -top-2 -left-5 w-20 h-20 text-[bg-logo] opacity-10 pointer-events-none select-none"
+              className="absolute -top-2 -left-5 w-20 h-20 text-[var(--bg-logo)] opacity-10 pointer-events-none select-none"
             />
             {/* Content */}
             <div className="relative">
@@ -80,7 +80,7 @@ export default function About() {
           <div className="t relative  p-6 w-[max(40vw,300px)] mt-6">
             {/* Faded background icon */}
             <GiAbstract053
-              className="absolute -top-2 -left-5 w-20 h-20 text-[bg-logo] opacity-10 pointer-events-none select-none"
+              className="absolute -top-2 -left-5 w-20 h-20 text-[var(--bg-logo)] opacity-10 pointer-events-none select-none"
             />
             {/* Content */}
             <div className="relative">
@@ -93,9 +93,9 @@ export default function About() {
         </div>
       </div>
 
-      <div className="skills">
-        <div className="a flex justify-center p-9 ">
-          <h2 className=' alg border-6 border-black md:text-3xl p-4 md:px-18 font-bold tracking-widest'>S K I L L S</h2>
+      <div className="skills p-9">
+        <div className=" flex justify-center  p-8 ">
+          <h2 className=' border-4  md:text-3xl p-4 md:px-18 font-bold tracking-widest'>S K I L L S</h2>
         </div>
         <Skills />
       </div>

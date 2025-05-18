@@ -45,7 +45,7 @@ function Navbar() {
 
     return (
         <div className="">
-            <nav className='navbar bg-[var(--midnight)] text-white flex justify-between relative p-4'>
+            <nav className='navbar bg-[var(--midnight)]  text-white flex justify-between relative p-4'>
                 <div className='logo' >
                     <RouterLink to="/" aria-label="Navigate to Home" >LOGO</RouterLink>
                 </div>

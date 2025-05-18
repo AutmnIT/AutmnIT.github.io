@@ -10,16 +10,18 @@ html {
   --skyBlue: #0EA5E9;
   --white: #E5E7EB;
   --darkSlate: #1E293B;
-  --light-gray: #E5E7EB
-  --hard-gray: #111827
-  --light-navy:#112240
+  --lightSlate:#1d293d;
+  --light-gray: #d1d5db;
+  --hard-gray: #111827;
+  --light-navy:#112240;
 }
 
 [data-theme='dark'] {
   --bg: var(--midnight);
   --text: var(--white);
   --secondary-bg: var(--darkSlate);
-  --bg-logo:var( --light-gray);
+  --bg-logo:var(--light-gray);
+  --bg-card:var(--lightSlate);
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -27,8 +29,10 @@ html {
 [data-theme='light'] {
   --bg: var(--white);
   --text: var(--midnight);
-  --bg-logo:var(--hard-gray);
   --secondary-bg: var(--darkSlate);
+  --bg-logo:var(--hard-gray);
+  --bg-card:var(--light-gray);
+  
   transition: background-color 0.3s, color 0.3s;
 }
 

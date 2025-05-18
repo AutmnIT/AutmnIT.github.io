@@ -3,7 +3,7 @@
 export default function Hero() {
   return (
     <div>
-      <div className='container bg-darkSlate text-white py-16 md:flex p-4 w-[90vw] h-[96vh]'>
+      <div className='container text-white py-16 md:flex p-4 w-[90vw] h-[96vh]'>
 
         <div className="left w-[50%] flex flex-col justify-center items-center">
           <h1 className='text-4xl font-bold'>Hi, I am <span className='text-blue-500'>Rajat Yadav</span></h1>
