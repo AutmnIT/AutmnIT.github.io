@@ -93,7 +93,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="skills p-9">
+      <div className="skills p-9 ">
         <div className=" flex justify-center  p-8 ">
           <h2 className=' border-4  md:text-3xl p-4 md:px-18 font-bold tracking-widest'>S K I L L S</h2>
         </div>

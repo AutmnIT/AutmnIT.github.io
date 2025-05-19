@@ -21,14 +21,14 @@ function Projects() {
   ]
 
   return (
-    <div className="">
+    
       <div className="portfolio py-9">
         <div className="flex justify-center p-8 ">
           <h2 className=' border-4 md:text-3xl p-4 md:px-18 font-bold tracking-widest'>P O R T F O L I O</h2>
         </div>
-      </div>
+      
 
-      <div className="projects m-auto w-[max(85vw,300px)]">
+      <div className="projects pt-4 m-auto w-[max(85vw,300px)]">
 
         {/*Populating featured projects card*/}
         <div className="cards flex flex-wrap justify-center items-center gap-4 ">
