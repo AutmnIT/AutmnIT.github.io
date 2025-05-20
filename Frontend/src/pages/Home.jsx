@@ -14,7 +14,7 @@ function Home() {
       <section id='about'><About/></section>
       <section id='projects'><Projects/></section>
       <section id='workWithMe'><WorkWithMe/></section>
-      <section id='donate'><Donate/></section>
+      {/* <section id='donate'><Donate/></section> */}
     </div>
   )
 }

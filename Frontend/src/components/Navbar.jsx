@@ -39,7 +39,7 @@ function Navbar() {
         { name: 'ABOUT', to: 'about', isRoute: false },
         { name: 'PROJECTS', to: 'projects', isRoute: false },
         { name: 'WORK WITH ME', to: 'workWithMe', isRoute: false },
-        { name: 'DONATE', to: 'donate', isRoute: false },
+        // { name: 'DONATE', to: 'donate', isRoute: false },
         { name: 'BLOGS', to: '/blog', isRoute: true }
     ]
 
