@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import logo from "../assets/favicon.svg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
 
@@ -44,23 +45,25 @@ function Navbar() {
     ]
 
     return (
-        <div className="">
-            <nav className='navbar bg-[var(--midnight)]  text-white flex justify-between relative p-4'>
+        <div className="bg-transparent ">
+            <nav className='navbar  text-white flex justify-between relative p-6 px-10 xl:px-20'>
                 <div className='logo' >
-                    <RouterLink to="/" aria-label="Navigate to Home" >LOGO</RouterLink>
+                    <HashLink to="/#hero" aria-label="Navigate to Home" >
+                    <img src={logo} alt="logo" className=" w-8 font-bold text-3xl" />
+                    </HashLink>
                 </div>
                 {/* window navbar */}
-                <div className='hidden md:flex gap-4 items-center'>
-                    <ul className='flex gap-4'>
+                <div className='hidden md:flex lg:gap-4 xl:gap-6 gap-2 items-center'>
+                    <ul className='flex lg:gap-4 xl:gap-6 gap-2'>
                         {/* Populate navbar */}
                         { 
                             Navlinks.map((link) => (
                                 <li key={link.name}>
                                     {
                                         (link.isRoute) ? (
-                                            <RouterLink to={link.to} aria-label={`Navigate to ${link.name.toLowerCase()} page`} className="">
+                                            <Link to={link.to} aria-label={`Navigate to ${link.name.toLowerCase()} page`} className="">
                                                 {link.name}
-                                                </RouterLink>
+                                                </Link>
                                         ) : (
                                             <HashLink to={`/#${link.to}`} aria-label={`Navigate to ${link.name.toLowerCase()} section`} className="">
                                                 {link.name}
@@ -91,7 +94,7 @@ function Navbar() {
                                         <li  key={link.name} >
                                         {
                                             (link.isRoute) ? (
-                                                <RouterLink to={link.to} onClick={() => (setIsOpen(false))} aria-label={`Navigate to ${link.name.toLowerCase()} page`}>{link.name}</RouterLink>
+                                                <Link to={link.to} onClick={() => (setIsOpen(false))} aria-label={`Navigate to ${link.name.toLowerCase()} page`}>{link.name}</Link>
                                             ) : (
                                                 <HashLink to={`/#${link.to}`} onClick={() => (setIsOpen(false))} aria-label={`Navigate to ${link.name.toLowerCase()} section`}>{link.name}</HashLink>
                                             )

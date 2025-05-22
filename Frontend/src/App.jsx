@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
+import Footer from './components/Footer';
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const router = createBrowserRouter([
@@ -13,6 +15,7 @@ function App() {
         <>
           <Navbar />
           <Home />
+          <Footer/>
         </>
       ),
     },
@@ -20,8 +23,11 @@ function App() {
       path: '/blog',
       element: (
         <>
+        <ScrollToTop/>
           <Navbar />
+          
           <Blog />
+          <Footer/>
         </>
       ),
     },
@@ -31,6 +37,7 @@ function App() {
         <>
           <Navbar />
           <Home />
+          <Footer/>
         </>
       ),
     },
