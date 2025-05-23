@@ -6,9 +6,11 @@ html {
 }
 /* Global variables */
 :root {
-  --midnight: #0F172A;
+  --midnight: #010716;
+  --midnight-op: #01071682;
   --skyBlue: #0EA5E9;
   --white: #E5E7EB;
+  --white-op: #e5e7eb5e;
   --darkSlate: #1E293B;
   --lightSlate:#1d293d;
   --light-gray: #d1d5db;
@@ -18,7 +20,9 @@ html {
 
 [data-theme='dark'] {
   --bg: var(--midnight);
+  --bg-nav: var(--midnight-op);
   --text: var(--white);
+ 
   --secondary-bg: var(--darkSlate);
   --bg-logo:var(--light-gray);
   --bg-card:var(--lightSlate);
@@ -28,7 +32,9 @@ html {
 
 [data-theme='light'] {
   --bg: var(--white);
+  --bg-nav: var(--white-op);
   --text: var(--midnight);
+  
   --secondary-bg: var(--darkSlate);
   --bg-logo:var(--hard-gray);
   --bg-card:var(--light-gray);
@@ -47,6 +53,6 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  transition: all 0.15s ease;
+  transition: all 0.3s ease;
   z-index: 10;
 }

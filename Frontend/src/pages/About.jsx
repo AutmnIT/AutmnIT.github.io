@@ -53,7 +53,7 @@ export default function About() {
           <div className="f relative  p-6 w-[max(40vw,300px)] mt-6">
             {/* Faded background icon */}
             <MdDesignServices
-              className="absolute -top-2 -left-5 w-20 h-20 text-[var(--bg-logo)] opacity-10 pointer-events-none select-none"
+              className="absolute -top-4 -left-5 w-25 h-25 text-[var(--bg-logo)] opacity-10 pointer-events-none select-none"
             />
             {/* Content */}
             <div className="relative">

@@ -14,15 +14,15 @@ export default function Hero() {
   ];
 
   return (
-    <>
+    < div className="text-[var(--text)]">
       {/* UI for window */}
       <div className="hidden relative w-full h-[100vh] md:flex overflow-hidden">
         {/* Left: Text + Social */}
         <div className="w-1/2 flex flex-col gap-8 justify-center items-center bg-gray-400 [clip-path:polygon(0_0,100%_0,80%_100%,0%_100%)]">
           <div className="px-4">
-            <div className="text-2xl mx-2">Hi, I am</div>
-            <div className="text-6xl font-bold tracking-wider">Rajat Yadav</div>
-            <p className="text-lg text-center mt-4 tracking-wider text-gray-200">Full-Stack Developer</p>
+            <div className="text-2xl mx-2 ">Hi, I am</div>
+            <div className="text-6xl font-bold tracking-wider ">Rajat Yadav</div>
+            <p className="text-lg text-center mt-4 tracking-wider  font-medium text-[var(--bg-logo)] ">Full-Stack Developer</p>
           </div>
 
           <div className="flex flex-col items-center gap-6">
@@ -30,11 +30,11 @@ export default function Hero() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl font-medium border-4 p-2 px-8 transition-all duration-200 hover:scale-105"
+              className="text-2xl font-medium border-4 p-2 px-8 transition-all hover:scale-105"
             >
               R e s u m e
             </a>
-            <div className="flex gap-5 text-white text-2xl">
+            <div className="flex gap-5  text-2xl">
               {socialMedia.map((media) => (
                 <a
                   key={media.name}
@@ -76,7 +76,7 @@ export default function Hero() {
             <div className="px-4">
               <div className=" ">Hi, I am</div>
               <div className="text-xl font-bold tracking-wider">Rajat Yadav</div>
-              <p className=" tracking-wider text-gray-200 mb-4">Full-Stack Developer</p>
+              <p className=" tracking-wider font-medium text-[var(--bg-logo)] mb-4">Full-Stack Developer</p>
               <a
                 href="/resume.pdf"
                 target="_blank"
@@ -103,7 +103,7 @@ export default function Hero() {
             </div>
           </div>
       </div>
-    </>
+    </div >
   );
 }
 

@@ -33,14 +33,14 @@ function Projects() {
         {/*Populating featured projects card*/}
         <div className="cards flex flex-wrap justify-center items-center gap-4 ">
           {featuredProjects.map((project , index) => (
-            <div key={index} className="card group cursor-pointer flex flex-col rounded-2xl p-3 w-[350px] bg-[var(--bg-card)] hover:-translate-y-2">
+            <div key={index} className="card group cursor-pointer flex flex-col rounded-2xl p-3 w-[350px] bg-[var(--bg-card)] transition-all duration-300 hover:-translate-y-2">
               <a href={project.link} target='_blank' rel="noopener noreferrer">
                 <div className=' w-full h-[200px] rounded-2xl'>
                   <img src={project.screenshoot} alt={project.name} className='w-full h-full object-cover object-center rounded-2xl' />
                 </div>
 
                 <div className="content p-2">
-                  <h1 className='text-3xl font-bold my-2 transition bg-gradient-to-r from-white to-white group-hover:from-purple-700 group-hover:to-slate-500 bg-clip-text text-transparent'>{project.name}</h1>
+                  <h1 className='text-3xl font-bold my-2  bg-gradient-to-r from-white to-white group-hover:from-purple-700 transition-all duration-300 group-hover:to-slate-500 bg-clip-text text-transparent'>{project.name}</h1>
                   <p className='font-light text-sm'>{project.desc}</p>
                 </div>
               </a>
@@ -54,8 +54,8 @@ function Projects() {
                   ))}
                 </ul>
                 <div className="icon flex gap-4 justify-center items-center ">
-                  <a href={project.link} target='_blank' rel="noopener noreferrer" title="External Link"><FaGithub className='hover:scale-150' /></a>
-                  <a href={project.live} target='_blank' rel="noopener noreferrer" title="External Link"><FaExternalLinkAlt className='hover:scale-150' /></a>
+                  <a href={project.link} target='_blank' rel="noopener noreferrer" title="External Link"><FaGithub className='transition-all duration-300 hover:scale-150' /></a>
+                  <a href={project.live} target='_blank' rel="noopener noreferrer" title="External Link"><FaExternalLinkAlt className=' transition-all duration-300 hover:scale-150' /></a>
                 </div>
               </div>
 
@@ -73,13 +73,13 @@ function Projects() {
 
           {/*Populating other projects card*/}
           {otherProjects.map((project, index) => (
-            <div key={index} className="card cursor-pointer flex flex-col rounded-2xl p-3 w-[350px] bg-[var(--bg-card)] hover:-translate-y-2">
+            <div key={index} className="card cursor-pointer flex flex-col rounded-2xl p-3 w-[350px] bg-[var(--bg-card)] transition-all duration-300 hover:-translate-y-2">
               <a href={project.link} target='_blank' rel="noopener noreferrer">
                 <div className=' w-full h-[200px] rounded-2xl'>
                   <img src={project.screenshoot} alt={project.name} className='w-full h-full object-cover object rounded-2xl' />
                 </div>
                 <div className="content p-2">
-                  <h1 className='text-3xl font-bold my-2 transition group-hover:from-purple-700 group-hover:to-slate-900'>{project.name}</h1>
+                  <h1 className='text-3xl font-bold my-2  group-hover:from-purple-700 transition-all duration-300 group-hover:to-slate-900'>{project.name}</h1>
 
                   <p className='font-light text-sm'>{project.desc}</p>
 
@@ -92,8 +92,8 @@ function Projects() {
                   ))}
                 </ul>
                 <div className="icon flex gap-4 justify-center items-center ">
-                  <a href={project.link} target='_blank' rel="noopener noreferrer" title="External Link"><FaGithub className='hover:scale-150' /></a>
-                  <a href={project.live} target='_blank' rel="noopener noreferrer" title="External Link"><FaExternalLinkAlt className='hover:scale-150' /></a>
+                  <a href={project.link} target='_blank' rel="noopener noreferrer" title="External Link"><FaGithub className='transition-all duration-300 hover:scale-150' /></a>
+                  <a href={project.live} target='_blank' rel="noopener noreferrer" title="External Link"><FaExternalLinkAlt className='transition-all duration-300 hover:scale-150' /></a>
                 </div>
               </div>
 

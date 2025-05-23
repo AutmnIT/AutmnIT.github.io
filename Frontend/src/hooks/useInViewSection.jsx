@@ -11,6 +11,7 @@ export function useInViewSection(sectionIds) {
       const section = document.getElementById(id);
       if (!section) return;
 
+      //intersectionobserver is a browser featuer that let's us watch element on our page and notify when visible
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
