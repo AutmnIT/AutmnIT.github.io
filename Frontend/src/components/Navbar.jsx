@@ -26,9 +26,10 @@ function Navbar() {
             if (lastScrollY.current < window.scrollY) {
                 setShownav(false);
             } else {
-                setIsOpen(false);
+                setShownav(true);
+                
             }
-            setShownav(true); //to close mobile menu in case nav hide/unhide
+             setIsOpen(false);//to close mobile menu in case nav hide/unhide
             lastScrollY.current = window.scrollY;
         }
 

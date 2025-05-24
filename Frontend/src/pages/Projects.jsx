@@ -14,6 +14,7 @@ function Projects() {
 
   let featuredProjects = [
     { screenshoot: "\ChatGPT Image May 15, 2025, 11_39_27 PM.png", link: "https://github.com/AutmnIT", name: "Teskisky Mart", desc: "Tekisky Mart is a web-based platform that allows users to search, explore, and purchase a wide range of products from various providers, offering a seamless and efficient shopping experience.", techStack: ["react", "tailwind", "javascript"], live: "https://www.linkedin.com/in/-rajat-yadav-/" },
+    { screenshoot: "\ChatGPT Image May 15, 2025, 11_39_27 PM.png", link: "", name: "Teskisky Mart", desc: "Tekisky Mart is a web-based platform that allows users to search, explore, and purchase a wide range of products from various providers, offering a seamless and efficient shopping experience.", techStack: ["react", "tailwind", "javascript"], live: "" },
   ]
 
   let otherProjects = [
@@ -23,8 +24,9 @@ function Projects() {
   return (
     
       <div className="portfolio py-9">
-        <div className="flex justify-center p-8 ">
-          <h2 className=' border-4 md:text-3xl p-4 md:px-18 font-bold tracking-widest'>P O R T F O L I O</h2>
+        <div className="flex flex-col justify-center items-center p-8 pb-14">
+          <h2 className='  md:text-4xl p-4 md:px-18 font-bold tracking-widest'>Things I’ve Built</h2>
+          <h5 className='font-light text-[12px] bg-[var(----bg-logo)]' >(more comming)</h5>
         </div>
       
 
@@ -45,17 +47,19 @@ function Projects() {
                 </div>
               </a>
 
-              <div className="tech-stack flex  justify-between items-center pt-4 ">
-                <ul className='flex  items-center flex-wrap gap-2 text-[12px] '>
+              <div className="card-footer flex  justify-between items-center pt-4 ">
+                <ul className='tech-stack flex  items-center flex-wrap gap-2 text-[12px] '>
 
                   {/*Populating techstack*/}
                   {project.techStack.map((tech, index)=>(
                     <li key={index} className='bg-gradient-to-l from-purple-500 to-pink-500 bg-clip-text text-transparent'>{tech}</li>
                   ))}
                 </ul>
+
+                {/* External links */}
                 <div className="icon flex gap-4 justify-center items-center ">
-                  <a href={project.link} target='_blank' rel="noopener noreferrer" title="External Link"><FaGithub className='transition-all duration-300 hover:scale-150' /></a>
-                  <a href={project.live} target='_blank' rel="noopener noreferrer" title="External Link"><FaExternalLinkAlt className=' transition-all duration-300 hover:scale-150' /></a>
+                  {(project.link.length > 0) && <a href={project.link} target='_blank' rel="noopener noreferrer" title="External Link"><FaGithub className='transition-all duration-300 hover:scale-150' /></a>}
+                  {(project.live.length > 0) && <a href={project.live} target='_blank' rel="noopener noreferrer" title="External Link"><FaExternalLinkAlt className=' transition-all duration-300 hover:scale-150' /></a>}
                 </div>
               </div>
 
@@ -92,8 +96,8 @@ function Projects() {
                   ))}
                 </ul>
                 <div className="icon flex gap-4 justify-center items-center ">
-                  <a href={project.link} target='_blank' rel="noopener noreferrer" title="External Link"><FaGithub className='transition-all duration-300 hover:scale-150' /></a>
-                  <a href={project.live} target='_blank' rel="noopener noreferrer" title="External Link"><FaExternalLinkAlt className='transition-all duration-300 hover:scale-150' /></a>
+                  {(project.link.length > 0) && <a href={project.link} target='_blank' rel="noopener noreferrer" title="External Link"><FaGithub className='transition-all duration-300 hover:scale-150' /></a>}
+                  {(project.live.length > 0) && <a href={project.live} target='_blank' rel="noopener noreferrer" title="External Link"><FaExternalLinkAlt className=' transition-all duration-300 hover:scale-150' /></a>}
                 </div>
               </div>
 

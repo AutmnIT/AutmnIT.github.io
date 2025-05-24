@@ -1,6 +1,10 @@
 import { useForm } from 'react-hook-form';
+import plane from '../assets/contactimg/plane.png'
+import movingPlane from '../assets/contactimg/plane-moving.gif'
+import { useState } from 'react';
 
 function WorkWithMe() {
+  const [isClicked, setIsClicked] = useState(false)
   const {
     register,
     handleSubmit,
@@ -9,13 +13,16 @@ function WorkWithMe() {
     formState: { errors, isSubmitting }
   } = useForm();
 
-  let onSubmit = (data)=>{
-    {console.log(isSubmitting)}
+  let onSubmit = (data) => {
+    { console.log(isSubmitting) }
     console.log(data)
     alert('Message sent! I’ll get back to you soon.');
     reset();
   }
-  
+
+  let handleClick = ()=>{
+    setIsClicked(true)
+  }
   return (
     <div >
       <div className="portfolio py-9">
@@ -24,10 +31,10 @@ function WorkWithMe() {
         </div>
         <div className="content  max-w-[375px] m-auto ">
           <p className='text-center p-4'>Got a project idea, want to hire me for your company or just want to connect? </p>
-          <p className='text-center p-2'>Drop me a message—I’d love to hear from you! </p>
+          <p className='text-center p-2'>Drop me a message on social media — I’d love to hear from you! </p>
         </div>
 
-        <div className="form flex justify-center items-center" >
+        {/* <div className="form flex justify-center items-center" >
           <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col justify-center'>
 
             <div className="username border-l-6 border-b-6 border-[var(--bg-logo)] w-[280px] md:w-[50vw] m-10">
@@ -81,6 +88,17 @@ function WorkWithMe() {
               <button disabled={isSubmitting}  type="submit" value="SUBMIT" className='border-x-2 md:px-12 px-6 font-medium tracking-wider cursor-pointer'>SUBMIT</button>
             </div>
           </form>
+        </div> */}
+
+        <div className="contact flex flex-col justify-center ">
+          <div className="animate flex flex-col m-auto w-[max(300px,40vw)]">
+            <img src={plane} alt="plane" className={`w-full ${(isClicked)&&"hidden"} `}/>
+            <img src={movingPlane} alt="movingPlanegif" className={`w-full ${(!isClicked)&&"hidden"} `} />
+          </div>
+
+          {(!isClicked)&&<button className="m-[40px] text-center">
+            <a id="email-button" href="mailto:mbmrajatit@gmail.com" className='border-2 p-2 transition-all duration-300 hover:bg-[var(--bg-card)] ' onClick={handleClick}>Say Hello</a>
+          </button>}
         </div>
       </div>
     </div>

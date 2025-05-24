@@ -38,9 +38,9 @@ function Skills() {
         <div>
             <div className="skill-nav flex  justify-center p-8">
                 <div className='flex rounded-4xl border-1  '>
-                    <button className={`using cursor-pointer font-bold tracking-widest px-9 py-2 hover:rounded-4xl ${(selected === 'btn1') ? "bg-gradient-to-r from-purple-900 to-slate-900 rounded-4xl " : ''} `} onClick={() => handleSelect('btn1')}>USING </button>
+                    <button className={` using cursor-pointer font-bold tracking-widest px-9 py-2  hover:rounded-4xl ${(selected === 'btn1') ? "bg-gradient-to-r from-purple-900 to-slate-900 rounded-4xl " : ''} `} onClick={() => handleSelect('btn1')}>USING </button>
 
-                    <button className={`learning cursor-pointer font-bold tracking-widest px-9 py-2 hover:rounded-4xl  ${(selected === 'btn2') ? "bg-gradient-to-r from-slate-900 to-purple-900 rounded-4xl" : ''}`} onClick={() => handleSelect('btn2')}>LEARNING </button>
+                    <button className={`learning cursor-pointer font-bold tracking-widest px-9 py-2 hover:rounded-4xl  ${(selected === 'btn2') ? "bg-gradient-to-r from-slate-900 to-purple-900 rounded-4xl" : ' '}`} onClick={() => handleSelect('btn2')}>LEARNING </button>
                 </div>
             </div>
 
@@ -48,25 +48,25 @@ function Skills() {
                 <div className="cards flex justify-center flex-wrap gap-4 ">
                     {(selected === 'btn1') ?
                         skills.map((skill, index) => (
-                            <div className="card  rounded" key={index}>
-                                <div className=' m-2  justify-start p-4 transition-all duration-300 ease-in-out hover:scale-150 hover:rotate-[720deg] '>
+                            <div className="card  rounded group" key={index}>
+                                <div className=' m-2  justify-start p-4 transition-all duration-300 ease-in-out group-hover:scale-150 group-hover:rotate-[720deg] '>
                                     {skill.icon}
                                 </div>
-                                <p className=" text-sm font-semibold text-center">{skill.name}</p>
+                                <p className=" text-sm font-semibold text-center transition-all duration-300 ease-in-out group-hover:scale-150">{skill.name}</p>
                             </div>
                         ))
                         :
                         ((learning.length) ?
                             learning.map((skill, index) => (
-                                <div className="card  rounded" key={index}>
-                                    <div className=' m-2  justify-start p-4 transition-all duration-300 ease-in-out hover:scale-150 hover:rotate-[720deg] '>
+                                <div className="card  rounded group hover:shadow-2xl " key={index}>
+                                    <div className=' m-2  justify-start p-4 transition-all duration-300 ease-in-out group-hover:scale-150 group-hover:rotate-[720deg] '>
                                         {skill.icon}
                                     </div>
-                                    <p className=" text-sm font-semibold text-center">{skill.name}</p>
+                                    <p className=" text-sm font-semibold text-center transition-all duration-300 ease-in-out group-hover:scale-150">{skill.name}</p>
                                 </div>
                             ))
                             :
-                            (<div className='p-16 font-bold text-xl tracking-wider'> <p>NONE: FOCUSSING ON MASTERING EXISTING SKILLS</p> </div>)
+                            (<div className='p-16 font-bold text-xl tracking-wider '> <p>NONE: FOCUSSING ON MASTERING EXISTING SKILLS</p> </div>)
                         )
                     }
                 </div>

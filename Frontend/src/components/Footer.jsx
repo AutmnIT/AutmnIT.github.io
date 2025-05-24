@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { LuLinkedin, LuInstagram, LuGithub } from "react-icons/lu";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaAngleDoubleUp } from "react-icons/fa";
+import { PiRocketBold } from "react-icons/pi";
 import { useInViewSection } from '../hooks/useInViewSection';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
@@ -19,12 +19,27 @@ const Footer = () => {
     //Keep check on page section
     const activeSection = useInViewSection(['hero', 'about', 'projects', 'workWithMe']);
 
-    const scrollToTop = ()=>(
-        window.scrollTo({top:0, behavior:'smooth'})
+    const scrollToTop = () => (
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     )
 
     return (
         <>
+            <style>
+                {`
+                    @keyframes jump {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-5px); }
+                    }
+                    .jump {
+                    animation: jump 0.8s ease-in-out infinite;
+                    }
+                    .jump-on-hover:hover {
+                    animation: jump 0.8s ease-in-out infinite;
+                    }
+                `}
+            </style>
+
 
             {/* window view */}
             <div className={`hidden transition-all duration-300  md:flex ${(activeSection === 'hero') ? " opacity-0" : ""} `}>
@@ -32,7 +47,7 @@ const Footer = () => {
                     <div className=" text-sm text-gray-500 flex flex-col items-center gap-6">
                         <div className="social flex flex-col gap-6">
                             {socialMedia.map((media) => (
-                                <a key={media.name} href={media.link} target="_blank" rel='noopener noreferrer' className='font-bold text-xl hover:-translate-y-1 hover:text' > {media.logo}</a>
+                                <a key={media.name} href={media.link} target="_blank" rel='noopener noreferrer' className='font-bold text-xl  jump-on-hover  hover:text-violet-600 ' > {media.logo}</a>
                             ))}
                         </div>
                         <div className="w-px h-24 bg-gray-400"></div>
@@ -41,7 +56,7 @@ const Footer = () => {
 
                 <div className="fixed bottom-0 -right-10 flex flex-col items-center space-y-3 z-50">
                     <div className=" text-sm text-gray-500 flex flex-col items-center justify-center gap-24 ">
-                        <div className="text-sm text-gray-500 rotate-90 tracking-widest">
+                        <div className="text-sm text-gray-500 rotate-90 tracking-widest hover:text-violet-600">
                             <Link to="mailto:mbmrajatit@gmail.com">
                                 mbmrajatit@gmail.com
                             </Link>
@@ -54,16 +69,16 @@ const Footer = () => {
 
             <footer className="w-full mt-10 p-12 text-center text-sm text-gray-400 flex flex-col justify-center items-center ">
 
-                <div className="back flex flex-col justify-center items-center py-8 cursor-pointer" onClick={scrollToTop}>
-                    <div className="logo"><FaAngleDoubleUp /></div>
-                    <p className='tracking-widest text-sm font-medium'>BACK TO TOP</p>
+                <div className="group back flex flex-col justify-center items-center py-6 md:py-1 cursor-pointer" onClick={scrollToTop}>
+                    <div className="logo jump  text-2xl"><PiRocketBold /></div>
+                    <p className='tracking-widest text-[10px] font-medium opacity-0 group-hover:opacity-95'>BACK TO TOP</p>
                 </div>
 
 
                 {/*Media of Mobile view */}
                 <div className="mb-2 flex justify-center items-center gap-5 md:hidden pb-4">
                     {socialMedia.map((media) => (
-                        <a key={media.name} href={media.link} target="_blank" rel='noopener noreferrer' className='font-bold text-xl' > {media.logo}</a>
+                        <a key={media.name} href={media.link} target="_blank" rel='noopener noreferrer' className='font-bold text-xl transition-all hover:scale-125' > {media.logo}</a>
                     ))}
                 </div>
 
