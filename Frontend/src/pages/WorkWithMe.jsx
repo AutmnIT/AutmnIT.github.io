@@ -5,23 +5,29 @@ import { useState } from 'react';
 
 function WorkWithMe() {
   const [isClicked, setIsClicked] = useState(false)
-  const {
-    register,
-    handleSubmit,
-    watch,
-    reset,
-    formState: { errors, isSubmitting }
-  } = useForm();
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   watch,
+  //   reset,
+  //   formState: { errors, isSubmitting }
+  // } = useForm();
+  // let onSubmit = (data) => {
+  //   { console.log(isSubmitting) }
+  //   console.log(data)
+  //   alert('Message sent! I’ll get back to you soon.');
+  //   reset();
+  // }
 
-  let onSubmit = (data) => {
-    { console.log(isSubmitting) }
-    console.log(data)
-    alert('Message sent! I’ll get back to you soon.');
-    reset();
-  }
+
 
   let handleClick = ()=>{
-    setIsClicked(true)
+    setIsClicked(true);
+    const url = "https://mail.google.com/mail/?view=cm&fs=1&to=mbmrajatit@gmail.com";
+    setTimeout(() => {
+      window.open(url,"_blank")
+      setIsClicked(false);
+    }, 2300);
   }
   return (
     <div >
@@ -90,6 +96,7 @@ function WorkWithMe() {
           </form>
         </div> */}
 
+
         <div className="contact flex flex-col justify-center ">
           <div className="animate flex flex-col m-auto w-[max(300px,40vw)]">
             <img src={plane} alt="plane" className={`w-full ${(isClicked)&&"hidden"} `}/>
@@ -97,7 +104,7 @@ function WorkWithMe() {
           </div>
 
           {(!isClicked)&&<button className="m-[40px] text-center">
-            <a id="email-button" href="mailto:mbmrajatit@gmail.com" className='border-2 p-2 transition-all duration-300 hover:bg-[var(--bg-card)] ' onClick={handleClick}>Say Hello</a>
+            <span id="email-button" className='border-2 p-2 transition-all duration-300 hover:bg-[var(--bg-card)] ' onClick={handleClick}>Say Hello</span>
           </button>}
         </div>
       </div>
