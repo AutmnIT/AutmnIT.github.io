@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import ai from "../assets/ai.jpeg"
+import er from "../assets/error.png"
 
 const blogPosts = [
   {
@@ -12,28 +13,13 @@ const blogPosts = [
   },
   {
     id: '2',
-    title: 'How a Developer Can Beat AI (Without Losing Their Mind)',
-    date: 'May 20, 2025',
-    excerpt: 'If you’re just starting out or midway into your coding journey, it’s easy to feel like you’re already behind.But here’s the thing: AI is a tool. Not a replacement. And if you use it right, you can actually be better than ever.',
-    image: ai,
-    link: 'https://dev.to/rajat_yadav_/how-a-developer-can-beat-ai-without-losing-their-mind-33mj',
+    title: '🛠️ How a Missing Debug File in pdf-parse Crashed My Node.js App (And How I Fixed It)',
+    date: 'June 4, 2025',
+    excerpt: 'If you’re seeing ENOENT related to 05-versions-space.pdf while using pdf-parse in Node.js — it’s not your fault. It’s hidden debug logic inside the library. Here’s the fix.',
+    image: er,
+    link: 'https://medium.com/@mbmrajatit/%EF%B8%8F-how-a-missing-debug-file-in-pdf-parse-crashed-my-node-js-app-and-how-i-fixed-it-be5ba7077527',
   },
-  {
-    id: '3',
-    title: 'How a Developer Can Beat AI (Without Losing Their Mind)',
-    date: 'May 20, 2025',
-    excerpt: 'If you’re just starting out or midway into your coding journey, it’s easy to feel like you’re already behind.But here’s the thing: AI is a tool. Not a replacement. And if you use it right, you can actually be better than ever.',
-    image: ai,
-    link: 'https://dev.to/rajat_yadav_/how-a-developer-can-beat-ai-without-losing-their-mind-33mj',
-  },
-  {
-    id: '4',
-    title: 'How a Developer Can Beat AI (Without Losing Their Mind)',
-    date: 'May 20, 2025',
-    excerpt: 'If you’re just starting out or midway into your coding journey, it’s easy to feel like you’re already behind.But here’s the thing: AI is a tool. Not a replacement. And if you use it right, you can actually be better than ever.',
-    image: ai,
-    link: 'https://dev.to/rajat_yadav_/how-a-developer-can-beat-ai-without-losing-their-mind-33mj',
-  },
+  
   
 ];
 

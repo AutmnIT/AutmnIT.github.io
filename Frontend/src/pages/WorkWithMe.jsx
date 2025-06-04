@@ -4,7 +4,7 @@ import movingPlane from '../assets/contactimg/plane-moving.gif'
 import { useState } from 'react';
 
 function WorkWithMe() {
-  const [isClicked, setIsClicked] = useState(false)
+  const [isClicked, setIsClicked] = useState(false);
   // const {
   //   register,
   //   handleSubmit,
@@ -40,6 +40,7 @@ function WorkWithMe() {
           <p className='text-center p-2'>Drop me a message on social media — I’d love to hear from you! </p>
         </div>
 
+        {/* form */}
         {/* <div className="form flex justify-center items-center" >
           <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col justify-center'>
 
@@ -97,6 +98,8 @@ function WorkWithMe() {
         </div> */}
 
 
+
+        {/* Gmail navigation button */}
         <div className="contact flex flex-col justify-center ">
           <div className="animate flex flex-col m-auto w-[max(300px,40vw)]">
             <img src={plane} alt="plane" className={`w-full ${(isClicked)&&"hidden"} `}/>
