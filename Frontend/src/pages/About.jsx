@@ -3,7 +3,7 @@ import { MdDesignServices } from 'react-icons/md'; // Design icon from Material 
 import { FaScrewdriverWrench } from "react-icons/fa6";
 import { GiAbstract053 } from "react-icons/gi";
 import Skills from '../components/Skills';
-import my from '../assets/2.jpg'
+import my from '../assets/Myimg/2.jpg'
 
 export default function About() {
 
@@ -22,9 +22,10 @@ export default function About() {
         <div className="a flex justify-center p-8 pb-14">
           <h2 className=' alg  md:text-4xl p-4  md:px-18 font-bold '>About Me</h2>
         </div>
-        <div className='flex flex-col xl:flex-row '>
-          <div className="about-img p-3 w-56 self-start md:w-2/5 lg:w-72 bg-white dark:bg-grey-800 flex  gap-2 items-center rounded-2xl mx-auto lg:mx-16 hover:-translate-y-2 transition-transform duration-300 lg:-rotate-3">
-          <img src={my} alt="my image" className='w-full h-60 md:h-60 rounded-2xl object-cover grayscale hover:grayscale-0 transition-all duration-300 bg-violet-100' /></div>
+        <div className='flex flex-col lg:flex-row '>
+          <div className="about-img p-3 w-56 self-start md:w-2/5 lg:w-72 bg-white bg-grey-800 flex  gap-2 items-center rounded-2xl mx-auto lg:mx-16 hover:-translate-y-2 transition-transform duration-300 lg:-rotate-3">
+            <img src={my} alt="my image" className='w-full h-60 md:h-60 rounded-2xl object-cover lg:grayscale hover:grayscale-0 transition-all duration-300 bg-violet-100' />
+          </div>
           <div className="content m-auto w-[max(65vw,300px)] my-6">
             <div className="main">
               <p>I&apos;m a full-stack developer who builds with purpose and ships with precision. With a strong foundation in JavaScript, Node.js, and modern web frameworks, I focus on crafting clean, scalable, and user-centered solutions. Whether it&apos;s building systems from scratch or improving existing ones, I bring clarity, speed, and a product mindset to the table.</p>

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import ai from "../assets/ai.jpeg"
-import er from "../assets/error.png"
+import ai from "../assets/blogsImg/ai.jpeg"
+import er from "../assets/blogsImg/error.png"
 
 const blogPosts = [
   {

@@ -107,7 +107,7 @@ function WorkWithMe() {
           </div>
 
           {(!isClicked)&&<button className="m-[40px] text-center">
-            <span id="email-button" className='border-2 p-2 transition-all duration-300 hover:bg-[var(--bg-card)] ' onClick={handleClick}>Say Hello</span>
+            <span id="email-button" className='border-2 p-2 transition-all duration-300 hover:bg-[var(--bg-card)] cursor-pointer' onClick={handleClick}>Say Hello</span>
           </button>}
         </div>
       </div>

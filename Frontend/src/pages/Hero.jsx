@@ -1,11 +1,9 @@
 // if we don't use noopener noreferrer then -> window.opener.location = 'fake site' for phishng
-// import my from "../assets/IMG-20250509-WA0006-Photoroom.png";
-import my from "../assets/1.png";
-// import my from "../assets/3.png";
-// import my from "../assets/4.png";
+
+import my from "../assets/Myimg/1.png";
+
 import { LuLinkedin, LuInstagram, LuGithub } from "react-icons/lu";
 import { FaXTwitter } from "react-icons/fa6";
-import { HashLink } from 'react-router-hash-link';
 import hand from "../assets/waving-hand.1da6fc7a.gif";
 
 
@@ -34,18 +32,18 @@ export default function Hero() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl font-medium border-4 p-2 px-8 transition-all hover:scale-105"
+              className="text-2xl font-medium border-4 p-2 px-8 transition-all hover:scale-105 hover:text-violet-600"
             >
               R e s u m e
             </a>
-            <div className="flex gap-5  text-2xl">
+            <div className="flex gap-5  text-2xl ">
               {socialMedia.map((media) => (
                 <a
                   key={media.name}
                   href={media.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-all hover:scale-110"
+                  className="transition-all hover:scale-110 hover:text-violet-600"
                   aria-label={media.name}
                 >
                   {media.logo}
