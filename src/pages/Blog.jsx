@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 import ai from "../assets/blogsImg/ai.jpeg"
 import er from "../assets/blogsImg/error.png"
 
@@ -36,9 +36,9 @@ function Blog() {
         <div className="blogs m-6 md:mx-28 flex flex-col gap-6">
           {blogPosts.map((blog)=>(
             <a key={blog.id} href={blog.link} target="_blank" rel="noopener noreferrer" aria-label={`Read more about ${blog.title}`} >
-            <div className="blog group md:flex gap-4 rounded-2xl border p-2.5 md:p-4 cursor-pointer transform duration-200 hover:-translate-y-1 border-[var(--skyBlue)]">
+            <div className="blog group md:flex lg:flex-row flex-col gap-4 rounded-2xl border p-2.5 md:p-4 cursor-pointer transform duration-200 hover:-translate-y-1 border-[var(--skyBlue)]">
 
-              <div className="left min-w-[300px] min-h-[200px] rounded-2xl">
+              <div className="left w-full md:w-[400px] aspect-[3/2] rounded-2xl flex-shrink-0">
                 <img src={blog.image} alt={blog.title} className='w-full h-full  md:object-fill object-center rounded-2xl' />
               </div>
               <div className="right">
