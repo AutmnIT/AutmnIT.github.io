@@ -78,7 +78,7 @@ const Footer = () => {
                 <div className="mb-2 flex justify-center items-center gap-5 md:hidden pb-4">
                     {socialMedia.map((media) => (
                         <a key={media.name} href={media.link} target="_blank" rel='noopener noreferrer' className='font-bold text-xl transition-all hover:scale-125' > {media.logo}</a>
-                    ))}~
+                    ))}
                 </div>
 
                 <p>&copy; 2025 Rajat yadav. All rights reserved.</p>
