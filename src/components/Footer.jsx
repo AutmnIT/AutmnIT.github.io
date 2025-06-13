@@ -3,7 +3,6 @@ import { LuLinkedin, LuInstagram, LuGithub } from "react-icons/lu";
 import { FaXTwitter } from "react-icons/fa6";
 import { PiRocketBold } from "react-icons/pi";
 import { useInViewSection } from '../hooks/useInViewSection';
-import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -41,7 +40,7 @@ const Footer = () => {
             </style>
 
 
-            {/* window view */}
+            {/* window view left/right side */}
             <div className={`hidden transition-all duration-300  md:flex ${(activeSection === 'hero') ? " opacity-0" : ""} `}>
                 <div className="fixed bottom-0 left-8 flex flex-col items-center justify-center space-y-3 z-50">
                     <div className=" text-sm text-gray-500 flex flex-col items-center gap-6">
@@ -67,11 +66,11 @@ const Footer = () => {
             </div>
 
 
-            <footer className="w-full mt-10 p-12 text-center text-sm text-gray-400 flex flex-col justify-center items-center ">
+            <footer className="w-full md:mt-10 md:p-12 text-center text-sm text-gray-400 flex flex-col justify-center items-center ">
 
                 <div className="group back flex flex-col justify-center items-center py-6 md:py-1 cursor-pointer" onClick={scrollToTop}>
                     <div className="logo jump  text-2xl"><PiRocketBold /></div>
-                    <p className='tracking-widest text-[10px] font-medium opacity-0 group-hover:opacity-95'>BACK TO TOP</p>
+                    <p className='tracking-widest text-[10px] font-medium opacity-95 md:opacity-0 group-hover:opacity-95'>BACK TO TOP</p>
                 </div>
 
 
@@ -79,7 +78,7 @@ const Footer = () => {
                 <div className="mb-2 flex justify-center items-center gap-5 md:hidden pb-4">
                     {socialMedia.map((media) => (
                         <a key={media.name} href={media.link} target="_blank" rel='noopener noreferrer' className='font-bold text-xl transition-all hover:scale-125' > {media.logo}</a>
-                    ))}
+                    ))}~
                 </div>
 
                 <p>&copy; 2025 Rajat yadav. All rights reserved.</p>

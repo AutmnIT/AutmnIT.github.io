@@ -84,10 +84,10 @@ function Navbar() {
 
     return (
         <>
-            <nav className={`navbar bg-[var(--bg-nav)] bg-opacity-40  text-sm font-medium tracking-wider flex justify-between relative p-2 px-10 xl:px-20 ${navUpClass} `}>
+            <nav className={`navbar bg-[var(--bg-nav)] bg-opacity-40  text-sm font-medium tracking-wider flex justify-between relative p-6 md:p-3 px-10 xl:px-20 ${navUpClass} `}>
                 <div className='logo' >
                     <HashLink to="/#hero" aria-label="Navigate to Home" >
-                        <img src={logo} alt="logo" className="  w-8 transition-all duration-300 hover:scale-110 relative z-10" />
+                        <img src={logo} alt="logo" className="  w-8 transition-all duration-300 hover:scale-110 relative z-10 md:scale-100 scale-125" />
                     </HashLink>
                 </div>
                 {/* window navbar */}
@@ -121,7 +121,7 @@ function Navbar() {
                 {/* mobile menu*/}
                 <div className=" flex flex-row md:hidden ">
                     <div className="toggle flex justify-center items-center gap-6 z-10 ">
-                        <button className="md:hidden flex justify-end items-center cursor-pointer" onClick={handleMenu} aria-label="Toggle menu">{(!isOpen) ? <FaBars /> : <FaTimes />}</button>
+                        <button className="md:hidden md:scale-100 scale-125 scale-x-150 flex justify-end items-center cursor-pointer" onClick={handleMenu} aria-label="Toggle menu">{(!isOpen) ? <FaBars /> : <FaTimes />}</button>
                     </div>
 
                     {/* if toogle or screen moves menu closes */}

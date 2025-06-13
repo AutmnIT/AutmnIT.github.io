@@ -63,9 +63,9 @@ export default function Hero() {
       </div>
       
       {/* UI for mobile */}
-      <div className="mobile md:hidden relative  w-full h-[100vh] bg-black overflow-hidden ">
+      <div className="mobile md:hidden relative  w-full h-[90vh] bg-black overflow-hidden ">
         <div className="top ">
-          <div className="absolute -right-36  items-center max-h-[80vh] ">
+          <div className="absolute -right-36 bottom-0 items-center max-h-[80vh] ">
             <img
               src={my}
               alt="Rajat Yadav"
