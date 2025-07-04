@@ -1,4 +1,4 @@
-// useInViewSection.js (or .ts if you're using TypeScript)
+
 import { useEffect, useState } from 'react';
 
 export function useInViewSection(sectionIds) {

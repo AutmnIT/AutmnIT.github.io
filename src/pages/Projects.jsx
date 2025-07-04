@@ -14,7 +14,7 @@ function Projects() {
 
 
   let featuredProjects = [
-    { screenshoot: p1, link: "https://github.com/AutmnIT/SkillSync", name: "Skillsync", desc: "SkillSync is an AI-powered web app that analyzes your resume and a job description to give you personalized feedback. It shows how likely you are to get shortlisted, highlights skill gaps, gives interview prep advice, and even helps you craft a referral message .", techStack: ["react", "tailwind", "Nodejs", "Express"], live: "" , complete: false},
+    { screenshoot: p1, link: "https://github.com/AutmnIT/SkillSync", name: "Skillsync", desc: "SkillSync is an AI-powered web app that analyzes your resume and a job description to give you personalized feedback. It shows how likely you are to get shortlisted, highlights skill gaps, gives interview prep advice, and even helps you craft a referral message .", techStack: ["react", "tailwind", "Nodejs", "Express"], live: "https://skillsync-vert.vercel.app/" , complete: true},
     
   ]
 

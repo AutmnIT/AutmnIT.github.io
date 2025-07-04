@@ -22,18 +22,15 @@ function Navbar() {
                 setShownav(false);
             } else {
                 setShownav(true);
-
             }
             setIsOpen(false);//to close mobile menu in case nav hide/unhide
             lastScrollY.current = window.scrollY;
         }
-
         window.addEventListener("scroll", handleScroll);
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-
     }, [])
 
     //sideEffect to change theme
